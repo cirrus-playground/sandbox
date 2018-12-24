@@ -1,6 +1,8 @@
 container:
   image: golang:latest
 
+use_compute_credits: true
+
 test_task:
   env:
     CIRRUS_WORKING_DIR: /go/src/github.com/$CIRRUS_REPO_FULL_NAME
