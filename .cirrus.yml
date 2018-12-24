@@ -1,14 +1,9 @@
 container:
   image: golang:latest
 
-env:
-  GITHUB_TOKEN: ENCRYPTED[700ce0ed7d88a32de654c6ef38ae864588aca9531bbe1e306d090ff463434983ac0eaed655b62002e52e0492c6427b78]
-
 test_task:
   env:
     CIRRUS_WORKING_DIR: /go/src/github.com/$CIRRUS_REPO_FULL_NAME
-  printenv_script: printenv
   get_script: go get -t -v ./...
   build_script: go build
   test_script: go test -v ./...
-  deploy_script: ./scripts/deploy.sh
