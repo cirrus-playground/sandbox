@@ -14,5 +14,5 @@ jobs:
     runs-on: warp-macos-14-arm64-6x
     steps:
       - uses: actions/checkout@v3
-      - name: Version
-        run: ls -l /dev/*tart-version-*
+      - name: test
+        run: printenv
