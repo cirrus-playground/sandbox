@@ -11,7 +11,7 @@ on:
 jobs:
   macos:
     name: "Run on the fastest infrastructure"
-    runs-on: warp-macos-14-arm64-6x
+    runs-on: warp-ubuntu-latest-x64-2x
     steps:
       - uses: actions/checkout@v3
       - name: test
